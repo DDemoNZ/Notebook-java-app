@@ -1,0 +1,44 @@
+# NOTEBOOK MANAGEMENT
+# SAVE NOTEBOOK
+PUT {{host-url}}/notebooks
+Content-Type: application/json
+{
+  "id": "1",
+  "name": "test",
+  "nbNotes": 0
+}
+
+###
+# GET NOTEBOOK BY ID
+GET {{host-url}}/notebooks/1
+
+###
+# GET ALL NOTEBOOKS
+GET {{host-url}}/notebooks
+
+###
+# DELETE NOTEBOOK BY ID
+DELETE {{host-url}}/notebooks/1
+
+###
+
+# NOTE MANAGEMENT
+# SAVE NOTE
+PUT {{host-url}}/notes
+Content-Type: application/json
+{
+  "name": "test1",
+  "text": "testText1",
+  "category": "testCategory1",
+  "notebookId": 1
+}
+
+###
+# GET NOTE BY NOTEBOOK ID
+GET {{host-url}}/notes/notebook/1
+
+###
+# DELETE NOTE BY ID
+DELETE {{host-url}}/notes/1
+
+###
